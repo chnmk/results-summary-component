@@ -3,12 +3,19 @@
     src: url('../fonts/HankenGrotesk-VariableFont_wght.woff2') format('woff2');
 }
 
-.result {
-    font-family: 'Hanken Grotesk', serif;
+html, body {
+    height: 100%;
 }
 
-.summary {
+.flex-wrapper {
     font-family: 'Hanken Grotesk', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .attribution { 
