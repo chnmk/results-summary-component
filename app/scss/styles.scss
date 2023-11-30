@@ -3,26 +3,39 @@
     src: url('../fonts/HankenGrotesk-VariableFont_wght.woff2') format('woff2');
 }
 
-@media only screen and (min-width: 768px) {
-    .wrapper  {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        box-shadow: 20px 20px 50px lightgray;
-        border-radius: 25px;
+$primary-reaction: hsl(0, 100%, 67%);
+$primary-reaction-bg: hsla(0, 100%, 67%, 0.250);
+$primary-memory: hsl(39, 100%, 56%);
+$primary-memory-bg: hsla(39, 100%, 56%, 0.250);
+$primary-verbal: hsl(166, 100%, 37%);
+$primary-verbal-bg: hsla(166, 100%, 37%, 0.250);
+$primary-visual: hsl(234, 85%, 45%);
+$primary-visual-bg: hsla(234, 85%, 45%, 0.250);
+
+$gradiend-background-1: hsl(252, 100%, 67%);
+$gradiend-background-2: hsl(241, 81%, 54%);
+$gradient-circle-1: hsla(256, 72%, 46%, 1);
+$gradient-circle-2: hsla(241, 72%, 46%, 0);
+
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-button: hsl(224, 30%, 27%);
+
+$shadow-color: lightgray;
+$attribution-link: hsl(228, 45%, 44%);
+
+
+.wrapper  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 20px 20px 50px $shadow-color;
+    border-radius: 25px;
+    @media only screen and (width < 768px) {
+        flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .wrapper  {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        box-shadow: 20px 20px 50px lightgray;
-        border-radius: 25px;
-    }
-    
-}
+
 
 html, body {
     /*centralizing the element*/
@@ -36,23 +49,21 @@ html, body {
 
 
 
-@media only screen and (min-width: 768px) {
-    .result {
-        width: 50%;
-    }
-}
 
-@media only screen and (max-width: 767px) {
-    .result {
+.result {
+    width: 50%;
+    @media only screen and (width < 768px) {
         width: 100%;
     }
 }
 
+
+
 .result {
-    color: hsl(0, 0%, 100%);
+    color: $neutral-white;
     background: linear-gradient(
-        hsl(252, 100%, 67%),
-        hsl(241, 81%, 54%)
+        $gradiend-background-1,
+        $gradiend-background-2
     );
     border-radius: 25px;
     text-align: center;
@@ -71,10 +82,9 @@ html, body {
     height: 120px;
     border-radius: 50%;
     background: linear-gradient(
-        hsla(256, 72%, 46%, 1),
-        hsla(241, 72%, 46%, 0)
+        $gradient-circle-1,
+        $gradient-circle-2
         );
-    /*background-color: hsla(256, 72%, 46%, 1);*/
 }
 
 .score-circle__user-score {
@@ -93,16 +103,11 @@ html, body {
 }
 
 
-@media only screen and (min-width: 768px) {
-    .summary {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .summary {
+.summary {
+    width: 50%;
+     @media only screen and (width < 768px) {
         width: 100%;
-    }
+     }
 }
 
 .summary__header {
@@ -123,7 +128,7 @@ html, body {
 }
 
 .reaction-bar {
-    background-color: hsla(0, 100%, 67%, 0.250);
+    background-color: $primary-reaction-bg;
     border-radius: 10px;
     padding: 10px;
     height: 16px;
@@ -135,7 +140,7 @@ html, body {
 }
 
 .reaction-bar__title {
-    color: hsl(0, 100%, 67%);
+    color: $primary-reaction;
     font-weight: 700;
     display: inline-block;
     vertical-align:top;
@@ -151,7 +156,7 @@ html, body {
 }
 
 .memory-bar {
-    background-color: hsla(39, 100%, 56%, 0.250);
+    background-color: $primary-memory-bg;
     border-radius: 10px;
     padding: 10px;
     height: 16px;
@@ -163,7 +168,7 @@ html, body {
 }
 
 .memory-bar__title {
-    color: hsl(39, 100%, 56%);
+    color: $primary-memory;
     font-weight: 700;
     display: inline-block;
     vertical-align: top;
@@ -179,7 +184,7 @@ html, body {
 }
 
 .verbal-bar {
-    background-color: hsla(166, 100%, 37%, 0.250);
+    background-color: $primary-verbal-bg;
     border-radius: 10px;
     padding: 10px;
     height: 16px;
@@ -191,7 +196,7 @@ html, body {
 }
 
 .verbal-bar__title {
-    color: hsl(166, 100%, 37%);
+    color: $primary-verbal;
     font-weight: 700;
     display: inline-block;
     vertical-align:top;
@@ -207,7 +212,7 @@ html, body {
 }
 
 .visual-bar {
-    background-color: hsla(234, 85%, 45%, 0.250);
+    background-color: $primary-visual-bg;
     border-radius: 10px;
     padding: 10px;
     height: 16px;
@@ -219,7 +224,7 @@ html, body {
 }
 
 .visual-bar__title {
-    color: hsl(234, 85%, 45%);
+    color: $primary-visual;
     font-weight: 700;
     display: inline-block;
     vertical-align:top;
@@ -245,8 +250,8 @@ html, body {
     width: 80%;
     border: none;
     border-radius: 25px;
-    background-color: hsl(224, 30%, 27%);
-    color: hsl(0, 0%, 100%);
+    background-color: $neutral-button;
+    color: $neutral-white;
 }
 
 
@@ -258,5 +263,5 @@ html, body {
     text-align: center; 
 }
 .attribution__link { 
-    color: hsl(228, 45%, 44%); 
+    color: $attribution-link; 
 }
