@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./my_screenshot.png)
+![](./screenshot.png)
 
 
 ### TODO
@@ -26,4 +26,4 @@ Users should be able to:
 
 - Gulp
 - SCSS
-- ...
+- (Update later)
