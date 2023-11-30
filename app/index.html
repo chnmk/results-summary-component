@@ -10,18 +10,20 @@
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
-  <main class="flex-wrapper">
+  <main class="wrapper">
     <section class="result">
       <div class="result__header">
         Your Result
       </div>
       <div class="score">
-        <div class="score__user-score">
-          76
-        </div> 
-        <div class="score__max-score">
-          of 100
-        </div>
+        <span class="score-circle">
+          <div class="score-circle__user-score">
+            76
+          </div>
+          <div class="score-cirlce__max-score">
+            of 100
+          </div>
+        </span>
       </div>
       <div class="result__eval">
         Great
@@ -34,56 +36,68 @@
       <div class="summary__header">
         Summary
       </div>
-      <div class="results-table">
+      <div class="summary__stats-table">
         <div class="reaction-bar">
+          <img class="reaction-bar__image" src="./images/icon-reaction.svg" alt="Reaction">
           <span class="reaction-bar__title">
             Reaction
           </span>
-          <span class="reaction-bar__user-score">
-            80
-          </span>
-          <span class="reaction-bar__max-score">
-            / 100
+          <span class="reaction-bar__scores">
+            <span class="reaction-bar__user-score">
+              80
+            </span>
+            <span class="reaction-bar__max-score">
+              / 100
+            </span>
           </span>
         </div>
         <div class="memory-bar">
+          <img class="memory-bar__image" src="./images/icon-memory.svg" alt="Reaction">
           <span class="memory-bar__title">
             Memory
           </span>
-          <span class="memory-bar__user-score">
-            92
-          </span>
-          <span class="memory-bar__max-score">
-            / 100
+          <span class="memory-bar__scores">
+            <span class="memory-bar__user-score">
+              92
+            </span>
+            <span class="memory-bar__max-score">
+              / 100
+            </span>
           </span>
         </div>
         <div class="verbal-bar">
+          <img class="verbal-bar__image" src="./images/icon-verbal.svg" alt="Reaction">
           <span class="verbal-bar__title">
             Verbal
           </span>
-          <span class="verbal-bar__user-score">
-            61
-          </span>
-          <span class="verbal-bar__max-score">
-            / 100
+          <span class="verbal-bar__scores">
+            <span class="verbal-bar__user-score">
+              61
+            </span>
+            <span class="verbal-bar__max-score">
+              / 100
+            </span>
           </span>
         </div>
         <div class="visual-bar">
+          <img class="visual-bar__image" src="./images/icon-visual.svg" alt="Reaction">
           <span class="visual-bar__title">
             Visual
           </span>
-          <span class="visual-bar__user-score">
-            72
-          </span>
-          <span class="visual-bar__max-score">
-            / 100
+          <span class="visual-bar__scores">
+            <span class="visual-bar__user-score">
+              72
+            </span>
+            <span class="visual-bar__max-score">
+              / 100
+            </span>
           </span>
         </div>
+      </div>
       <div class="summary__footer">
-        <button class="summary__footer-button">
+        <button class="summary__button">
           Continue
         </button>
-      </div>
       </div>
     </section>
   </main>

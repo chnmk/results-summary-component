@@ -3,23 +3,257 @@
     src: url('../fonts/HankenGrotesk-VariableFont_wght.woff2') format('woff2');
 }
 
-html, body {
-    height: 100%;
+@media only screen and (min-width: 768px) {
+    .wrapper  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-shadow: 20px 20px 50px lightgray;
+        border-radius: 25px;
+    }
 }
 
-.flex-wrapper {
-    font-family: 'Hanken Grotesk', serif;
+@media only screen and (max-width: 767px) {
+    .wrapper  {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-shadow: 20px 20px 50px lightgray;
+        border-radius: 25px;
+    }
+    
+}
+
+html, body {
+    /*centralizing the element*/
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+    font-family: 'Hanken Grotesk', serif;
 }
 
-.attribution { 
-    font-family: 'Hanken Grotesk', serif;
+
+
+@media only screen and (min-width: 768px) {
+    .result {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .result {
+        width: 100%;
+    }
+}
+
+.result {
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+    border-radius: 25px;
+    text-align: center;
+}
+
+.result__header {
+    margin-top: 15%;
+    margin-bottom: 20%;
+    font-weight: 700;
+}
+
+.score-circle {
+    display: inline-block;
+    width: 150px;
+    padding-top: 30px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+        );
+    /*background-color: hsla(256, 72%, 46%, 1);*/
+}
+
+.score-circle__user-score {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.result__eval {
+    margin-top: 25%;
+}
+
+.result__description {
+    margin: 1% 25% 15% 25%;
+    font-size: 10px;
+    
+}
+
+
+@media only screen and (min-width: 768px) {
+    .summary {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .summary {
+        width: 100%;
+    }
+}
+
+.summary__header {
+    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    font-weight: 700;
+}
+
+.summary__stats-table {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 12px;
+}
+
+.summary__stats-table > div {
+    margin-top:10px;
+}
+
+.reaction-bar {
+    background-color: hsla(0, 100%, 67%, 0.250);
+    border-radius: 10px;
+    padding: 10px;
+    height: 16px;
+}
+
+.reaction-bar__image {
+    margin-left: 3px;
+    height: 16px;
+}
+
+.reaction-bar__title {
+    color: hsl(0, 100%, 67%);
+    font-weight: 700;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 5px;
+}
+
+.reaction-bar__scores {
+    float: inline-end;
+}
+
+.reaction-bar__user-score {
+    font-weight: 700;
+}
+
+.memory-bar {
+    background-color: hsla(39, 100%, 56%, 0.250);
+    border-radius: 10px;
+    padding: 10px;
+    height: 16px;
+}
+
+.memory-bar__image {
+    margin-left: 3px;
+    height: 16px;
+}
+
+.memory-bar__title {
+    color: hsl(39, 100%, 56%);
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.memory-bar__scores {
+    float: inline-end;
+}
+
+.memory-bar__user-score {
+    font-weight: 700;
+}
+
+.verbal-bar {
+    background-color: hsla(166, 100%, 37%, 0.250);
+    border-radius: 10px;
+    padding: 10px;
+    height: 16px;
+}
+
+.verbal-bar__image {
+    margin-left: 3px;
+    height: 16px;
+}
+
+.verbal-bar__title {
+    color: hsl(166, 100%, 37%);
+    font-weight: 700;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 5px;
+}
+
+.verbal-bar__scores {
+    float: inline-end;
+}
+
+.verbal-bar__user-score {
+    font-weight: 700;
+}
+
+.visual-bar {
+    background-color: hsla(234, 85%, 45%, 0.250);
+    border-radius: 10px;
+    padding: 10px;
+    height: 16px;
+}
+
+.visual-bar__image {
+    margin-left: 3px;
+    height: 16px;
+}
+
+.visual-bar__title {
+    color: hsl(234, 85%, 45%);
+    font-weight: 700;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 5px;
+}
+
+.visual-bar__scores {
+    float: inline-end;
+}
+
+.visual-bar__user-score {
+    font-weight: 700;
+}
+
+.summary__footer {
+    margin-top: 15%;
+    margin-bottom: 12%;
+    text-align: center;
+}
+
+.summary__button {
+    padding: 5px;
+    width: 80%;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 25px;
     font-size: 11px; 
     text-align: center; 
 }
