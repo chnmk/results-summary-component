@@ -16,9 +16,6 @@ Users should be able to:
 
 ### TODO
 
-* Adjustments to text styles
-* Minor adjustments to mobile layout
-* Add focus states for all interactive elements
 * Use the local JSON data to dynamically populate the content
 
 ### Built with

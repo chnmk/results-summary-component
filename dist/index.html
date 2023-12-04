@@ -5,45 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./app/css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   
   <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="wrapper">
+    <section class="result">
+      <div class="result__header">
+        Your Result
+      </div>
+      <div class="score">
+        <div class="score-circle">
+          <div class="score-circle__user-score">
+            76
+          </div>
+          <div class="score-cirlce__max-score">
+            of 100
+          </div>
+        </div>
+      </div>
+      <div class="result__eval">
+        Great
+      </div>
+      <div class="result__description">
+        You scored higher than 65% of the people who have taken these tests.
+      </div>
+    </section>
+    <section class="summary">
+      <div class="summary__header">
+        Summary
+      </div>
+      <div class="summary__stats-table">
+        <div class="reaction-bar">
+          <img class="reaction-bar__image" src="./images/icon-reaction.svg" alt="Reaction">
+          <span class="reaction-bar__title">
+            Reaction
+          </span>
+          <span class="reaction-bar__scores">
+            <span class="reaction-bar__user-score">
+              80
+            </span>
+            <span class="reaction-bar__max-score">
+              / 100
+            </span>
+          </span>
+        </div>
+        <div class="memory-bar">
+          <img class="memory-bar__image" src="./images/icon-memory.svg" alt="Reaction">
+          <span class="memory-bar__title">
+            Memory
+          </span>
+          <span class="memory-bar__scores">
+            <span class="memory-bar__user-score">
+              92
+            </span>
+            <span class="memory-bar__max-score">
+              / 100
+            </span>
+          </span>
+        </div>
+        <div class="verbal-bar">
+          <img class="verbal-bar__image" src="./images/icon-verbal.svg" alt="Reaction">
+          <span class="verbal-bar__title">
+            Verbal
+          </span>
+          <span class="verbal-bar__scores">
+            <span class="verbal-bar__user-score">
+              61
+            </span>
+            <span class="verbal-bar__max-score">
+              / 100
+            </span>
+          </span>
+        </div>
+        <div class="visual-bar">
+          <img class="visual-bar__image" src="./images/icon-visual.svg" alt="Reaction">
+          <span class="visual-bar__title">
+            Visual
+          </span>
+          <span class="visual-bar__scores">
+            <span class="visual-bar__user-score">
+              72
+            </span>
+            <span class="visual-bar__max-score">
+              / 100
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="summary__footer">
+        <button class="summary__button summary__button--active">
+          Continue
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="attribution__link" href="https://github.com/chnmk/results-summary-component">github.com/chnmk</a>.
+  </footer>
   <script src="./app/js/main.min.js"></script>
 </body>
 </html>

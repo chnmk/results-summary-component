@@ -322,7 +322,23 @@ html, body {
     color: $neutral-white;
 }
 
+.summary__button:hover {
+    //change to "summary__button--active" when using JS
+    padding: 5px;
+    width: 80%;
+    height: 55px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(
+        $gradiend-background-1,
+        $gradiend-background-2
+    );
+    color: $neutral-white;
+}
 
+///=========================
 
 .attribution {
     position: absolute;
