@@ -26,22 +26,8 @@ $neutral-button: hsl(224, 30%, 27%);
 $shadow-color: lightgray;
 $attribution-link: hsl(228, 45%, 44%);
 
-
-.wrapper  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-shadow: 20px 20px 50px $shadow-color;
-    border-radius: 25px;
-    @media only screen and (width < 768px) {
-        flex-direction: column;
-    }
-}
-
-
-
 html, body {
-    /*centralizing the element*/
+    //centralizing the page
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -50,18 +36,30 @@ html, body {
     font-family: 'Hanken Grotesk', serif;
 }
 
+.wrapper  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 20px 20px 50px $shadow-color;
+    border-radius: 25px;
+    height: 512px;
+    @media only screen and (width < 768px) {
+        flex-direction: column;
+        height: 100%;
+        box-shadow: none;
+    }
+}
+
 ///=========================
 
 .result {
     width: 50%;
     @media only screen and (width < 768px) {
         width: 100%;
+        height: 50%;
+        margin-top: -30px;
     }
-}
-
-
-
-.result {
+    height: 512px;
     color: $neutral-white;
     background: linear-gradient(
         $gradiend-background-1,
@@ -72,8 +70,12 @@ html, body {
 }
 
 .result__header {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 39px;
+    margin-bottom: 35px;
+    @media only screen and (width < 768px) {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
     font-weight: 700;
     color: $neutral-lavender;
     font-size: 23px;    
@@ -82,8 +84,8 @@ html, body {
 .score-circle {
     display: inline-block;
     width: 200px;
-    padding-top: 40px;
-    height: 160px;
+    padding-top: 43px;
+    height: 157px;
     border-radius: 50%;
     background: linear-gradient(
         $gradient-circle-1,
@@ -100,16 +102,23 @@ html, body {
     font-size: 18px;
     font-weight: 600;
     color: $neutral-max-score;
+    margin-top: -6px;
 }
 
 .result__eval {
-    margin-top: 8%;
+    margin-top: 27px;
+    @media only screen and (width < 768px) {
+        margin-top: 20px;
+    }
     font-weight: 700;
     font-size: 32px;
 }
 
 .result__description {
-    margin: 5% 15% 15% 15%;
+    margin: 15px 20% 30px 20%;
+    @media only screen and (width < 768px) {
+        margin-top: 5px;
+    }
     font-size: 18px;
     color: $neutral-lavender;
     font-weight: 500;
@@ -121,12 +130,13 @@ html, body {
     width: 50%;
      @media only screen and (width < 768px) {
         width: 100%;
+        height: 50%;
      }
 }
 
 .summary__header {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 39px;
+    margin-bottom: 28px;
     margin-left: 10%;
     font-size: 23px;
     font-weight: 700;
@@ -139,7 +149,7 @@ html, body {
 }
 
 .summary__stats-table > div {
-    margin-top:10px;
+    margin-top:16px;
 }
 
 .reaction-bar {
@@ -295,7 +305,7 @@ html, body {
 }
 
 .summary__footer {
-    margin-top: 15%;
+    margin-top: 40px;
     margin-bottom: 12%;
     text-align: center;
 }
@@ -307,7 +317,7 @@ html, body {
     font-size: 18px;
     font-weight: 600;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: $neutral-button;
     color: $neutral-white;
 }

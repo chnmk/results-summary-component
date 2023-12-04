@@ -10,10 +10,9 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: Use the local JSON data to dynamically populate the content
 
-### Screenshot
+### Screenshot (04-12-23)
 
-![](./screenshot.png)
-
+![](preview/screenshot.png)
 
 ### TODO
 
