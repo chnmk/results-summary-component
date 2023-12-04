@@ -1,4 +1,5 @@
 /node_modules
+/dist
 /design
 style-guide.md
 README-old.md
