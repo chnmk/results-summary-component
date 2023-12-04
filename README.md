@@ -16,14 +16,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [(Add later)](https://your-solution-url.com)
+
+- Solution URL: [Vercel deployment](https://results-summary-component-git-main-chnmks-projects.vercel.app/)
 
 ### Built with
 
 - Gulp
-- SCSS
 - Flexbox
-- BEM methodology
+- SCSS
+- BEM
 
 ### TODO
 
