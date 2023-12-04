@@ -14,12 +14,17 @@ Users should be able to:
 
 ![](preview/screenshot.png)
 
-### TODO
+### Links
 
-* Use the local JSON data to dynamically populate the content
+- Solution URL: [(Add later)](https://your-solution-url.com)
 
 ### Built with
 
 - Gulp
 - SCSS
-- (Update later)
+- Flexbox
+- BEM methodology
+
+### TODO
+
+* Use the local JSON data to dynamically populate the content
