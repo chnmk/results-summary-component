@@ -54,7 +54,7 @@ function watching() {
 }
 
 function cleaning() {
-    return src('dist')
+    return src('dist', {allowEmpty: true})
     .pipe(clean())
 }
 
@@ -66,7 +66,7 @@ function building() {
         'app/fonts/**/*.woff2',
         'app/index.html'
     ], {base: 'app'})
-    .pipe(dest('dist'))
+    .pipe(dest('./dist'))
 }
 
 exports.styles = styles
